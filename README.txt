@@ -11,12 +11,7 @@ numpy
 matplotlib
 sklearn
 
-## Question 1: Splitting wine.csv into training data and test data.
-Wine.csv 中的資料已經根據 Type0, 1, 2 排序好了，所以直接根據 rows 分成 3 個
-dataframes (type1, type2, type3)，並從三個 dataframes 中各隨機取 20 筆資料，將這
-60 筆資料存成 test.csv，剩下的 423 資料存成 train.csv。
+## Conclusion
 
-## Question 2: Evaluating the posterior probabilities and accuracy rate
-第二部分要訓練 classifier 然後用 test data 來算準確率。首先用 pandas 將 train.csv 跟
-test.csv 轉成 numpy arrays ， x_train 用來表示 feature values ，而 y_train 用來表示 labels
-(x_test, y_test 亦同)。
+本次作業主要練習 Maximum A Posteriori probability (MAP)，使用的葡萄酒資料分為 3 types 跟 16 features。除了撰寫 MAP 的所有流程，我們最後用 PCA 降低了資料維度，來輸出比較好觀察的圖形，而 PCA 的資料降維的功能，應在其他地方大有用處；最後一部分討論了 Class imbalance problem，雖在這裡只做討論，但在實作上非常重要。
+
